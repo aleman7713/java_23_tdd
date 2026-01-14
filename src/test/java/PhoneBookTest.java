@@ -46,7 +46,7 @@ public class PhoneBookTest {
         book.add("Гриша", "333-33-33");
         book.add("Костя", "444-44-44");
 
-        String number = book.findByNumber("Вася");
+        String number = book.findByName("Вася");
         Assertions.assertEquals("123-45-67", number);
     }
 
