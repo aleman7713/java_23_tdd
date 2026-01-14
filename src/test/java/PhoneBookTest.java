@@ -37,4 +37,17 @@ public class PhoneBookTest {
         Assertions.assertEquals("Вася", name);
     }
 
+
+    @Test
+    @DisplayName("Поиск номеру абонента по имени")
+    public void findByNameTest() {
+        book.add("Вася", "123-45-67");
+        book.add("Петя", "222-22-22");
+        book.add("Гриша", "333-33-33");
+        book.add("Костя", "444-44-44");
+
+        String number = book.findByNumber("Вася");
+        Assertions.assertEquals("123-45-67", number);
+    }
+
 }
