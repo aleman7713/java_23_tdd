@@ -3,16 +3,18 @@ import java.util.Map;
 
 public class PhoneBook {
 
-    private Map<String, String> book = new HashMap<>();
+    private Map<String, String> books = new HashMap<>();
+    private Map<String, String> numbers = new HashMap<>();
 
     public int add(String name, String number) {
 
-        book.put(name, number);
+        books.put(name, number);
+        numbers.put(number, name);
 
-        return  book.size();
+        return  books.size();
     }
 
     public String findByNumber(String number) {
-        return null;
+        return numbers.get(number);
     }
 }
