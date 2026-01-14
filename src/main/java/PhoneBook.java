@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
 
@@ -22,4 +23,14 @@ public class PhoneBook {
         return books.get(name);
     }
 
+    public void printAllNames() {
+        TreeMap<String, String> sorted = new TreeMap<>(books);
+
+        for (Map.Entry<String,String> entry : sorted.entrySet()) {
+            String key = entry.getKey();
+            // String value = entry.getValue();
+
+            System.out.println(key);
+        }
+    }
 }
